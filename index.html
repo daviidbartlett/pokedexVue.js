@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <span v-if="seen">{{ message }}</span>
+      <button v-on:click="showText">show message</button>
+      <button v-on:click="reverseText">reverse</button>
+      <ul>
+        <li v-for="todo in todos">
+          {{ todo.text
+          }}<button v-on:click="removeListItem(todos.indexOf(todo))">x</button>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
